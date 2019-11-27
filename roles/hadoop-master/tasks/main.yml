@@ -10,7 +10,7 @@
     owner: root
     group: root
     mode: '0644'
-  shell: source /etc/bashrc
+  #shell: source /etc/bashrc
 
 - name: updating the keys 
   shell: |
