@@ -10,9 +10,12 @@
     owner: root
     group: root
     mode: '0644'
-  #shell: source /etc/bashrc
+
+- name: set the values
+  shell: source /etc/bashrc
 
 - name: updating the keys 
+  ignore_errors: True  
   shell: |
     ssh-keygen -t rsa -P “”
     cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
