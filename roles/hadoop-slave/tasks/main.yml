@@ -1,0 +1,37 @@
+- name: setting up env variables
+  copy:
+    src: bashrc
+    dest: /etc/bashrc
+    owner: root
+    group: root
+    mode: '0644'
+  shell: source /etc/bashrc
+
+
+- name: Download Hadoop
+  get_url:
+    url: https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.tar.gz
+    dest: $HOME/
+    mode: '0755'
+
+- name: Unarchive Hadoop
+  unarchive:
+    src: $HOME/hadoop-2.7.3.tar.gz
+    dest: $HOME/
+    remote_src: yes
+
+- name: Delete the tar.gz file
+  shell: rm -rf hadoop-2.7.3.tar.gz
+
+  copy:
+    src: core-site.xml
+    dest: $HOME/hadoop-2.7.3/etc/hadoop/core-site.xml
+    owner: root
+    group: root
+    mode: '0644'  
+  copy:
+    src: hdfs-site.xml
+    dest: $HOME/hadoop-2.7.3/etc/hadoop/hdfs-site.xml
+    owner: root
+    group: root
+    mode: '0644'  
