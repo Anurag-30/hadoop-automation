@@ -1,0 +1,53 @@
+- name: updating the etc hosts
+  copy: 
+    src: hosts
+    dest: /etc/hosts
+
+- name: setting up env variables
+  copy:
+    src: bashrc
+    dest: /etc/bashrc
+    owner: root
+    group: root
+    mode: '0644'
+  shell: source /etc/bashrc
+
+- name: updating the keys 
+  shell: |
+    ssh-keygen -t rsa -P “”
+    cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+    ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave1
+    ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave2
+    ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave3
+
+
+- name: Download Hadoop
+  get_url:
+    url: https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.tar.gz
+    dest: $HOME/
+    mode: '0755'
+
+- name: Unarchive Hadoop
+  unarchive:
+    src: $HOME/hadoop-2.7.3.tar.gz
+    dest: $HOME/
+    remote_src: yes
+
+- name: Delete the tar.gz file
+  shell: rm -rf hadoop-2.7.3.tar.gz
+
+- name: copying slaves and master in to the hadoop conf
+  copy:
+    src: masters
+    dest: $HOME/hadoop-2.7.3/etc/hadoop/masters
+    owner: root
+    group: root
+    mode: '0644'  
+  copy:
+    src: slaves
+    dest: $HOME/hadoop-2.7.3/etc/hadoop/slaves
+    owner: root
+    group: root
+    mode: '0644'  
+
+

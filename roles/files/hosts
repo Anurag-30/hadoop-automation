@@ -1,0 +1,15 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+
+# Edit the IP's of the slave and master
+
+127.0.0.1       master
+                slave1     
+                slave2
