@@ -49,5 +49,15 @@
     owner: root
     group: root
     mode: '0644'  
-
-
+  copy:
+    src: core-site.xml
+    dest: $HOME/hadoop-2.7.3/etc/hadoop/core-site.xml
+    owner: root
+    group: root
+    mode: '0644'  
+  copy:
+    src: hdfs-site.xml
+    dest: $HOME/hadoop-2.7.3/etc/hadoop/hdfs-site.xml
+    owner: root
+    group: root
+    mode: '0644'  
