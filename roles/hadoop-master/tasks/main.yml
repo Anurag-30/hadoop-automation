@@ -11,17 +11,17 @@
     group: root
     mode: '0644'
 
-- name: set the values
-  shell: source /etc/bashrc
+# - name: set the values
+#   shell: source /etc/bashrc
 
-- name: updating the keys 
-  ignore_errors: True  
-  shell: |
-    yes y | ssh-keygen -t rsa -P “”
-    cat y.pub >> $HOME/.ssh/id_rsa.pub
-    ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave1
-    ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave2
-    ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave3
+# - name: updating the keys 
+#   ignore_errors: True  
+#   shell: |
+#     yes y | ssh-keygen -t rsa -P “”
+#     cat y.pub >> $HOME/.ssh/id_rsa.pub
+#     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave1
+#     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave2
+#     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave3
 
 
 - name: Download Hadoop
