@@ -56,5 +56,5 @@
     
 - name: copying slaves and master in to the hadoop conf
   copy:
-    src: masters
-    dest: $HOME/hadoop-2.7.3/etc/hadoop/
+    src: hdfs-site.xml
+    dest: $HOME/hadoop-2.7.3/etc/hadoop/hdfs-site.xml
