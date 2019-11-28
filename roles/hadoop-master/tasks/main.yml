@@ -44,13 +44,15 @@
     src: masters
     dest: $HOME/hadoop-2.7.3/etc/hadoop/masters
   
+- name: copying slaves and master in to the hadoop conf
   copy:
-    src: ../files/slaves
-    dest: $HOME/hadoop-2.7.3/etc/hadoop/slaves
+    src: masters
+    dest: $HOME/hadoop-2.7.3/etc/hadoop/masters
       
+- name: copying slaves and master in to the hadoop conf
   copy:
-    src: ../files/core-site.xml
-    dest: $HOME/hadoop-2.7.3/etc/hadoop/core-site.xml
+    src: masters
+    dest: $HOME/hadoop-2.7.3/etc/hadoop/masters
     
   copy:
     src: ../files/hdfs-site.xml
