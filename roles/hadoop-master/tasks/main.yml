@@ -46,8 +46,8 @@
   
 - name: copying slaves and master in to the hadoop conf
   copy:
-    src: masters
-    dest: $HOME/hadoop-2.7.3/etc/hadoop/masters
+    src: slaves
+    dest: $HOME/hadoop-2.7.3/etc/hadoop/slaves
       
 - name: copying slaves and master in to the hadoop conf
   copy:
