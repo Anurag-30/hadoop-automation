@@ -13,7 +13,7 @@
 
 - name: set the values
   shell: source /etc/bashrc
-/*
+
 - name: updating the keys 
   ignore_errors: True  
   shell: |
@@ -22,7 +22,7 @@
     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave1
     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave2
     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave3
-*/
+
 
 - name: Download Hadoop
   get_url:
