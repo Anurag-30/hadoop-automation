@@ -45,7 +45,7 @@
     dest: $HOME/hadoop-2.7.3/etc/hadoop/masters
   
   copy:
-    src: slaves
+    src: ../slaves
     dest: $HOME/hadoop-2.7.3/etc/hadoop/slaves
       
   copy:
