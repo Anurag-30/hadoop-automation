@@ -1,4 +1,4 @@
-- name: Setup Wiki Playbook 
+- name: Setup hadoop master
   hosts: localhost
   become: yes 
   roles:
