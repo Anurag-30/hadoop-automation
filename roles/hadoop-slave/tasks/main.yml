@@ -34,4 +34,4 @@
     dest: $HOME/hadoop-2.7.3/etc/hadoop/hdfs-site.
     
 - name: making directory for name node
-  shell: mkdir /root/
+  shell: mkdir /root/hadoop-2.7.3/namenode
