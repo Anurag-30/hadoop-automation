@@ -20,6 +20,11 @@
     ssh-keygen -t rsa -P “”
     cat y.pub >> $HOME/.ssh/authorized_keys
 
+- name: Set authorized key taken from file
+  authorized_key:
+    user: charlie
+    state: present
+    key: "{{ lookup('file', '/home/charlie/.ssh/id_rsa.pub') }}"
 
     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave1
     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave2
