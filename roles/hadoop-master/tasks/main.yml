@@ -22,7 +22,7 @@
 
 - name: Set authorized key taken from file
   authorized_key:
-    user: charlie
+    user: charlie                                  
     state: present
     key: "{{ lookup('file', '/home/charlie/.ssh/id_rsa.pub') }}"
 
