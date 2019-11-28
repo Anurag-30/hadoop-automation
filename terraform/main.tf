@@ -1,4 +1,4 @@
-resource "google_compute_instance" "default" {
+resource "google_compute_instance" "slave" {
   count = 3
   name         = "hadoop-slave-${count.index+1}"
   
