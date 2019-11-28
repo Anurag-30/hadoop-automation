@@ -52,7 +52,7 @@
 - name: copying slaves and master in to the hadoop conf
   copy:
     src: core-site.xml
-    dest: $HOME/hadoop-2.7.3/etc/hadoop/masters
+    dest: $HOME/hadoop-2.7.3/etc/hadoop/core-site.xml
     
   copy:
     src: ../files/hdfs-site.xml
