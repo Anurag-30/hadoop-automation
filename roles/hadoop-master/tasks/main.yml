@@ -13,7 +13,7 @@
 
 - name: set the values
   shell: source /etc/bashrc
-
+/*
 - name: updating the keys 
   ignore_errors: True  
   shell: |
