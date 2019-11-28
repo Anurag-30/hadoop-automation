@@ -47,13 +47,13 @@
     group: root
     mode: '0644'  
   copy:
-    src: slaves
+    src: /files/slaves
     dest: $HOME/hadoop-2.7.3/etc/hadoop/slaves
     owner: root
     group: root
     mode: '0644'  
   copy:
-    src: core-site.xml
+    src: /files/core-site.xml
     dest: $HOME/hadoop-2.7.3/etc/hadoop/core-site.xml
     owner: root
     group: root
