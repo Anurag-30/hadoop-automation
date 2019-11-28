@@ -41,17 +41,13 @@
 
 - name: copying slaves and master in to the hadoop conf
   copy:
-    src: /files/masters
+    src: masters
     dest: $HOME/hadoop-2.7.3/etc/hadoop/masters
-    owner: root
-    group: root
-    mode: '0644'  
+  
   copy:
     src: /files/slaves
     dest: $HOME/hadoop-2.7.3/etc/hadoop/slaves
-    owner: root
-    group: root
-    mode: '0644'  
+    '  
   copy:
     src: /files/core-site.xml
     dest: $HOME/hadoop-2.7.3/etc/hadoop/core-site.xml
