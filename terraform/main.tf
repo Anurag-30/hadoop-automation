@@ -60,14 +60,7 @@ boot_disk {
   network_interface {
     network = "default"
 
-    access_config {
-      // Ephemeral IP
-    }
-  }
-
-  metadata = {
-    foo = "bar"
-  }
+    
 
   metadata_startup_script = "sudo yum install java-1.8.0-openjdk"
 
