@@ -9,7 +9,7 @@
     </property>
     <property>
         <name>dfs.namenode.name.dir</name>
-        <value>/home/vagra/hadoop-2.7.3/namenode</value>
+        <value>/home/vagrant/hadoop-2.7.3/namenode</value>
     </property>
     <property>
         <name>dfs.datanode.data.dir</name>
