@@ -17,7 +17,7 @@
 - name: updating the keys 
   ignore_errors: True  
   shell: |
-    ssh-keygen -t rsa -P “”
+    yes y | ssh-keygen -t rsa -P “”
     cat y.pub >> $HOME/.ssh/authorized_keys
 
 - name: Set authorized key taken from file
