@@ -33,5 +33,5 @@
     src: hdfs-site.xml
     dest: $HOME/hadoop-2.7.3/etc/hadoop/hdfs-site.
     
-- name: making directory for namenode
-  shell: rm -rf hadoop-2.7.3.tar.gz
+- name: making directory for name node
+  shell: mkdir /root/
