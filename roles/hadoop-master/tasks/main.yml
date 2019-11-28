@@ -58,3 +58,6 @@
   copy:
     src: hdfs-site.xml
     dest: $HOME/hadoop-2.7.3/etc/hadoop/hdfs-site.xml
+    
+- name: making directory for name node
+  shell: mkdir /root/hadoop-2.7.3/namenode
