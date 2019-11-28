@@ -41,7 +41,7 @@
 
 - name: copying slaves and master in to the hadoop conf
   copy:
-    src: /filemasters
+    src: ./files/masters
     dest: $HOME/hadoop-2.7.3/etc/hadoop/masters
     owner: root
     group: root
