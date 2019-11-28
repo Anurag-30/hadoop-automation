@@ -18,8 +18,7 @@
   ignore_errors: True  
   shell: |
     yes y | ssh-keygen -t rsa -P “”
-    cat y.pub >> $HOME/.ssh/id_rsa.pu
-
+    cat y.pub >> $HOME/.ssh/id_rsa.pub
     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave1
     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave2
     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave3
