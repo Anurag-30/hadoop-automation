@@ -49,10 +49,10 @@
     dest: $HOME/hadoop-2.7.3/etc/hadoop/slaves
       
   copy:
-    src: core-site.xml
+    src: ../files/core-site.xml
     dest: $HOME/hadoop-2.7.3/etc/hadoop/core-site.xml
     
   copy:
-    src: hdfs-site.xml
+    src: ../files/hdfs-site.xml
     dest: $HOME/hadoop-2.7.3/etc/hadoop/hdfs-site.xml
   
