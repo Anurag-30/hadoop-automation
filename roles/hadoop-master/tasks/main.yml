@@ -37,7 +37,7 @@
     remote_src: yes
 
 - name: Delete the tar.gz file
-  shell: rm -rf /root/hadoop-2.7.3.tar.gz
+  shell: sudo rm -rf /root/hadoop-2.7.3.tar.gz
 
 - name: copying slaves and master in to the hadoop conf
   copy:
