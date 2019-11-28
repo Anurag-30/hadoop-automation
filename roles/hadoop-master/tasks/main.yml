@@ -45,7 +45,7 @@
     dest: $HOME/hadoop-2.7.3/etc/hadoop/masters
   
   copy:
-    src: /files/slaves
+    src: slaves
     dest: $HOME/hadoop-2.7.3/etc/hadoop/slaves
       
   copy:
@@ -53,8 +53,6 @@
     dest: $HOME/hadoop-2.7.3/etc/hadoop/core-site.xml
     
   copy:
-    src: /files/hdfs-site.xml
+    src: hdfs-site.xml
     dest: $HOME/hadoop-2.7.3/etc/hadoop/hdfs-site.xml
-    owner: root
-    group: root
-    mode: '0644'  
+  
