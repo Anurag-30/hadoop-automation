@@ -18,13 +18,7 @@
   ignore_errors: True  
   shell: |
     yes y | ssh-keygen -t rsa -P “”
-    cat y.pub >> $HOME/.ssh/id_rsa.pub
-
-- name: Set authorized key taken from file
-  authorized_key:
-    user: centos                                  #needs to be changed to vagrant 
-    state: present
-    key: "{{ lookup('file', '/home/charlie/.ssh/id_rsa.pub') }}"
+    cat y.pub >> $HOME/.ssh/id_rsa.pu
 
     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave1
     ssh-copy-id -i $HOME/.ssh/id_rsa.pub vagrant@slave2
