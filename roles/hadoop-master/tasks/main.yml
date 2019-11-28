@@ -22,7 +22,7 @@
 
 - name: Set authorized key taken from file
   authorized_key:
-    user: charlie                                  #needs to be changed to vagrant 
+    user: centos                                  #needs to be changed to vagrant 
     state: present
     key: "{{ lookup('file', '/home/charlie/.ssh/id_rsa.pub') }}"
 
